@@ -13,7 +13,7 @@ __HELP__ = """
 """
 
 
-@app.on_message(filters.command("iplookup"))
+@pbot.on_message(filters.command("iplookup"))
 async def ip_lookup(_, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("ip address is missing")
