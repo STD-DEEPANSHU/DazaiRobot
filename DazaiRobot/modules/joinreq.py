@@ -17,9 +17,9 @@ from functools import wraps
 
 
 #NAME - YOUR BOTS NAME (EG. from Raiden import dispatcher)
-from NAME import dispatcher, DEV_USERS
-from NAME.modules.helper_funcs.chat_status import bot_admin
-from NAME.modules.log_channel import loggable
+from DazaiRobot import dispatcher, DEV_USERS
+from DazaiRobot.modules.helper_funcs.chat_status import bot_admin
+from DazaiRobot.modules.log_channel import loggable
 
 
 
