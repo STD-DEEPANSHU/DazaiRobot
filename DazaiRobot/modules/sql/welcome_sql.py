@@ -11,14 +11,7 @@ DEFAULT_WELCOME = "{first} how are you."
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "**WELCOME TO {message.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖➖
-NAME: {u.mention}
-ID: {u.id}
-USERNAME: @{u.username}
-COUNT: {await pbot.get_chat_members_count(message.chat.id)}
-➖➖➖➖➖➖➖➖➖➖➖➖**
-",
+    "{first} welcome to our group Powered By @DeepXRobot",
 ]
 DEFAULT_GOODBYE_MESSAGES = [
     "{first} will be missed.",
