@@ -13,7 +13,7 @@ from DazaiRobot import pbot as app
 
 
 #AI IMAGE GENERATION FUNCTION
-@app.on_message(filters.command("aigen"), group=95)
+@app.on_message(filters.command("gen"), group=95)
 async def generateai(_, message):
     if len(message.text.split()) < 2:
         return await message.reply_text("No Prompt Given!")
