@@ -7,14 +7,7 @@ from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 from DazaiRobot.modules.helper_funcs.msg_types import Types
 from DazaiRobot.modules.sql import BASE, SESSION
 
-DEFAULT_WELCOME = "**WELCOME TO {message.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖➖
-NAME: {u.mention}
-ID: {u.id}
-USERNAME: @{u.username}
-COUNT: {await pbot.get_chat_members_count(message.chat.id)}
-➖➖➖➖➖➖➖➖➖➖➖➖**
-"
+DEFAULT_WELCOME = "{first} how are you."
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
