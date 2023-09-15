@@ -2,7 +2,7 @@ import asyncio
 import time
 from DazaiRobot import pbot
 from pyrogram import Client, filters
-from pbot import AsyncClient
+from pyrogram import AsyncClient
 from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
