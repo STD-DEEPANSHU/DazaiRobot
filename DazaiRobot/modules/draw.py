@@ -1,6 +1,6 @@
 import asyncio
 import time
-from DazaiRobot import Dazai
+from DazaiRobot import pbot
 from pyrogram import Client, filters
 from DazaiRobot.core_async import AsyncClient
 from pyrogram.types import (
@@ -35,7 +35,7 @@ button = InlineKeyboardMarkup(
 
 
 
-@Dazai.on_message(filters.command("draw"))
+@pbot.on_message(filters.command("draw"))
 async def draw(_, msg):
     if len(msg.command) < 2:
         return await msg.reply_text("<code>ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴘʀᴏᴍᴘᴛ. ᴜsᴀɢᴇ: /nx &lt;prompt&gt;</code>")
@@ -57,4 +57,4 @@ async def draw(_, msg):
         await asyncio.sleep(2)
         await process_msg.delete()
         await asyncio.sleep(1)
-        await Dazai.send_photo(msg.chat.id, image, reply_markup=button)
+        await pbot.send_photo(msg.chat.id, image, reply_markup=button)
