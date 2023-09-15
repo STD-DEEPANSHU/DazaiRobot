@@ -1,6 +1,6 @@
 import asyncio
 import time
-from pbot import pbot as Hiroko
+from DazaiRobot import pbot as Hiroko
 from pyrogram import Client, filters
 from lexica.core_async import AsyncClient
 from pyrogram.types import (
