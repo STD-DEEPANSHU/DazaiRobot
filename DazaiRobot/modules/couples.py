@@ -9,6 +9,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from DazaiRobot import pbot as app
+from DazaiRobot import COMMAND_HANDLER
 from DazaiRobot.modules.mongo.couples_db import _get_image, get_couple, save_couple
 
 def dt():
@@ -31,7 +32,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@app.on_message(filters.command("couples"))
+@app.on_message(filters.command("couples", COMMAND_HANDLER))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
