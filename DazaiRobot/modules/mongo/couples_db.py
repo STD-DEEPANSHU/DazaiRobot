@@ -1,4 +1,6 @@
-DazaiRobot.utils.mongo import *
+from DazaiRobot.utils.mongo import db
+
+coupledb = db.couple
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
