@@ -35,7 +35,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@pbot.on_message(filters.command("couples", COMMAND_HANDLER))
+@pbot.on_message(filters.command("couples"))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
