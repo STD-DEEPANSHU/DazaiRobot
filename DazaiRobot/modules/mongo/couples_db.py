@@ -1,7 +1,7 @@
 #MIT License
 #Copyright (c) 2023, ©NovaNetworks
 
-from from DazaiRobot.utils.mongo import db
+from from DazaiRobot.mongo import *
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
