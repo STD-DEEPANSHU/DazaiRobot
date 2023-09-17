@@ -1,7 +1,3 @@
-#MIT License
-#Copyright (c) 2023, ©NovaNetworks
-
-#IMPORTS
 import os 
 import random
 from datetime import datetime 
