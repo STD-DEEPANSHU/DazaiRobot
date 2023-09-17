@@ -14,7 +14,6 @@ from pyrogram.errors import (
 )
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardButton, InlineKeyboardMarkup
 
-from database.users_chats_db import db
 from misskaty import BOT_USERNAME, app
 from misskaty.core.decorator import asyncify, capture_err
 from misskaty.helper import fetch, use_chat_lang
