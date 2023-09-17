@@ -11,14 +11,6 @@ from pyrogram.enums import *
 from DazaiRobot import pbot as app
 from DazaiRobot.modules.mongo.couples_db import _get_image, get_couple, save_couple
 
-COUPLES_HANDLER = DisableAbleCommandHandler("couples", couple, run_async=True)
-dispatcher.add_handler(COUPLES_HANDLER)
-def dt():
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M")
-    dt_list = dt_string.split(" ")
-    return dt_list
-
 def dt_tom():
     a = (
         str(int(dt()[0].split("/")[0]) + 1)
