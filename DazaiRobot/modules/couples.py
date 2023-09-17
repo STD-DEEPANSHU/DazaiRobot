@@ -12,7 +12,7 @@ from pyrogram.types import *
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from DazaiRobot import pbot
+from DazaiRobot import pbot as app
 from DazaiRobot.modules.mongo.couples_db import _get_image, get_couple, save_couple
 
 def dt():
@@ -35,7 +35,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@pbot.on_message(filters.command("couples"))
+@app.on_message(filters.command("couples"))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -47,7 +47,7 @@ async def ctest(_, message):
          #GET LIST OF USERS
          list_of_users = []
 
-         async for i in pbot.get_chat_members(message.chat.id, limit=50):
+         async for i in app.get_chat_members(message.chat.id, limit=50):
              if not i.user.is_bot:
                list_of_users.append(i.user.id)
 
@@ -57,18 +57,18 @@ async def ctest(_, message):
               c1_id = random.choice(list_of_users)
 
 
-         photo1 = (await pbot.get_chat(c1_id)).photo
-         photo2 = (await pbot.get_chat(c2_id)).photo
+         photo1 = (await app.get_chat(c1_id)).photo
+         photo2 = (await app.get_chat(c2_id)).photo
  
-         N1 = (await pbot.get_users(c1_id)).mention 
-         N2 = (await pbot.get_users(c2_id)).mention
+         N1 = (await app.get_users(c1_id)).mention 
+         N2 = (await app.get_users(c2_id)).mention
          
          try:
-            p1 = await pbot.download_media(photo1.big_file_id, file_name="pfp.png")
+            p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
             p1 = "DazaiRobot/resources/bg.png"
          try:
-            p2 = await pbot.download_media(photo2.big_file_id, file_name="pfp1.png")
+            p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
             p2 = "DazaiRobot/resources/bg.png"
             
