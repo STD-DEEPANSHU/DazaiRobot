@@ -12,7 +12,7 @@ from pyrogram.types import *
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from DazaiRobot import app
+from DazaiRobot import pbot
 from DazaiRobot.Config import COMMAND_HANDLER
 from DazaiRobot.database.couples_db import _get_image, get_couple, save_couple
 
@@ -36,7 +36,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@app.on_message(filters.command("couples", COMMAND_HANDLER))
+@pbot.on_message(filters.command("couples", COMMAND_HANDLER))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -71,12 +71,12 @@ async def ctest(_, message):
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "Dazai/resources/bg.png"
+            p2 = "DazaiRobot/resources/bg.png"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("Dazai/resources/bg.png")
+         img = Image.open("DazaiRobot/resources/bg.png")
 
          img1 = img1.resize((320,320))
          img2 = img2.resize((320,320))
