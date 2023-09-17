@@ -1,7 +1,9 @@
 #MIT License
 #Copyright (c) 2023, ©NovaNetworks
 
-from from DazaiRobot.mongo import *
+from DazaiRobot.mongo import *
+
+coupledb = dbname["couples"]
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
