@@ -1,6 +1,3 @@
-#MIT License
-#Copyright (c) 2023, ©NovaNetworks
-
 DazaiRobot.utils.mongo import *
 
 async def _get_lovers(cid: int):
