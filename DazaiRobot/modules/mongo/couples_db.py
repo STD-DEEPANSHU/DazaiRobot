@@ -1,8 +1,7 @@
 #MIT License
 #Copyright (c) 2023, ©NovaNetworks
 
-from DazaiRobot.mongo import *
-
+from from DazaiRobot.utils.mongo import db
 coupledb = dbname["couples"] 
 
 async def _get_lovers(cid: int):
