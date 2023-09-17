@@ -12,6 +12,8 @@ from DazaiRobot import pbot as app
 from DazaiRobot import COMMAND_HANDLER
 from DazaiRobot.modules.mongo.couples_db import _get_image, get_couple, save_couple
 
+COMMAND_HANDLER
+
 def dt():
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M")
