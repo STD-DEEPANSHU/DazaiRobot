@@ -13,7 +13,6 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from DazaiRobot import pbot
-from Hu-Tao.Config import COMMAND_HANDLER
 from DazaiRobot.database.couples_db import _get_image, get_couple, save_couple
 
 def dt():
