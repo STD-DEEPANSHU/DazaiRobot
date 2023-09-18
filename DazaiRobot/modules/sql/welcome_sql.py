@@ -11,7 +11,7 @@ DEFAULT_WELCOME = "{first} how are you."
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} welcome to our group Powered By @DeepXRobot",
+    "NAME: {user.mention}\nID: {user.id}\nUSERNAME: @{user.username}",
 ]
 DEFAULT_GOODBYE_MESSAGES = [
     "{first} will be missed.",
