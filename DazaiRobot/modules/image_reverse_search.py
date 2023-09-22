@@ -33,7 +33,7 @@ def reverse(update: Update, context: CallbackContext):
                 f"[{result['data']['resultText']}]({result['data']['similarUrl']})",
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("ʟɪɴᴋ", url="https://t.me/The_Apexx")]]
+                    [[InlineKeyboardButton("ʟɪɴᴋ", url="https://t.me/DeepanshuXD")]]
                 ),
             )
         else:
